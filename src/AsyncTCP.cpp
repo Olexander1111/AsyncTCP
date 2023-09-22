@@ -1300,7 +1300,7 @@ int8_t AsyncServer::_accept(tcp_pcb* pcb, int8_t err){
             pcb->so_options |= SOF_KEEPALIVE; //Turn on TCP Keepalive for the given pcb
             // Set the time between keepalive messages in milli-seconds
             pcb->keep_idle = 950; // ms seconds
-            pcb->keep_intvl = 550; // ms seconds
+            pcb->keep_intvl = 1550; // ms seconds
             pcb->keep_cnt = 2; //The number of unanswered probes required to force closure of the socket
             //printf("keep alive is on"); //low level debug only
             return _tcp_accept(this, c);
